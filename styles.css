@@ -1,0 +1,24 @@
+* {
+  background-color: rgb(71, 109, 109);
+}
+
+h1 {
+  font-size: 44px;
+}
+
+#para {
+  font-size: 20px;
+  /* margin-left: 75px;
+  margin-right: 75px; */
+  margin: 50px 75px 20px 75px;
+}
+
+section {
+  font-size: 16px;
+  text-align: center;
+}
+#startButton {
+  background-color: antiquewhite;
+  font-size: 16px;
+  margin-top: 30px;
+}
