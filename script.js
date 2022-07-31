@@ -1,6 +1,9 @@
-let timer = 10
+let timer = 100
 let wrongAnswerTime = 10
-let totalTime = 100
+let startButton = document.querySelector("#startButton")
+let section = document.querySelector(".intro")
+let timeLeft = document.querySelector("#timeLeft")
+let gameDiv = document.querySelector("#gameQuestions")
 let questions = [{
     question: "Which one of these data types returns either a true or false value?",
     A: "String", 
@@ -52,3 +55,30 @@ let questions = [{
     C: "X", 
     D: "="},
 ]
+
+let questionsIndex = questions.length
+let questionIndexCurrent = 0
+
+
+let startGame = function gameFunction() {
+    section.style.display = "none"
+    gameQuestions()
+
+   timeFunc = setInterval(function() {
+       timer--;
+       timeLeft.textContent = "Time left: " + timer;
+
+       if(timer === 0) {
+           clearInterval(timeFunc);
+           score();
+       }
+   }, 1000);
+  }
+
+  startButton.addEventListener("click", startGame)
+
+  function gameQuestions() {
+      gameDiv.innerHTML = "<p>" + questions.question + "</p>"
+
+  }
+  

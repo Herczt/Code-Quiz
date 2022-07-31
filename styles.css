@@ -22,3 +22,9 @@ section {
   font-size: 16px;
   margin-top: 30px;
 }
+
+#timeLeft {
+  text-align: right;
+  margin-right: 50px;
+  font-size: 20px;
+}
